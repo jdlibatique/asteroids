@@ -1,3 +1,4 @@
+import logging
 import sys
 
 import pygame
@@ -48,11 +49,11 @@ def main():
                 sys.exit()
             for shot in shots:
                 if asteroid.is_collided(shot):
-                    print(f"Collision detected between {asteroid} and {shot}")
+                    logging.info(f"Collision detected between {asteroid} and {shot}")
                     asteroid.split()
                     shot.kill()
                     player.update_score(10)
-                    print(f"{player.name} scored! New score: {player.score}")
+                    logging.info(f"{player.name} scored! New score: {player.score}")
 
         screen.fill((0, 0, 0))
 

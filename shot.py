@@ -1,3 +1,5 @@
+import logging
+
 import pygame
 
 from circleshape import CircleShape
@@ -21,8 +23,8 @@ class Shot(CircleShape):
 
         if self.position.x < 0 or self.position.x >= pygame.display.get_surface().get_width():
             self.kill()
-            print("Shot out of bounds, removing shot.")
+            logging.info("Shot out of bounds, removing shot.")
 
         if self.position.y < 0 or self.position.y >= pygame.display.get_surface().get_height():
             self.kill()
-            print("Shot out of bounds, removing shot.")
+            logging.info("Shot out of bounds, removing shot.")
