@@ -18,3 +18,11 @@ class Shot(CircleShape):
 
     def update(self, dt):
         self.position += self.velocity * dt
+
+        if self.position.x < 0 or self.position.x >= pygame.display.get_surface().get_width():
+            self.kill()
+            print("Shot out of bounds, removing shot.")
+
+        if self.position.y < 0 or self.position.y >= pygame.display.get_surface().get_height():
+            self.kill()
+            print("Shot out of bounds, removing shot.")
