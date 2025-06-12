@@ -14,7 +14,7 @@ def main():
     pygame.init()
 
     clock = pygame.time.Clock()
-    dt = 0
+    delta_time = 0
 
     updatable = pygame.sprite.Group()
     drawable = pygame.sprite.Group()
@@ -40,7 +40,7 @@ def main():
             if event.type == pygame.QUIT:
                 return
 
-        updatable.update(dt)
+        updatable.update(delta_time)
 
         for asteroid in asteroids:
             if asteroid.is_collided(player):
@@ -62,7 +62,7 @@ def main():
 
         pygame.display.flip()
 
-        dt = clock.tick(60) / 1000
+        delta_time = clock.tick(60) / 1000
 
 if __name__ == "__main__":
     main()

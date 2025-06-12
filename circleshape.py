@@ -17,7 +17,7 @@ class CircleShape(pygame.sprite.Sprite):
         # sub-classes must override
         raise NotImplementedError("Sub-classes must implement the draw method")
 
-    def update(self, dt):
+    def update(self, delta_time):
         # sub-classes must override
         raise NotImplementedError("Sub-classes must implement the update method")
 

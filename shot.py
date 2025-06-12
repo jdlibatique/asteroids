@@ -18,8 +18,8 @@ class Shot(CircleShape):
             2
         )
 
-    def update(self, dt):
-        self.position += self.velocity * dt
+    def update(self, delta_time):
+        self.position += self.velocity * delta_time
 
         if self.position.x < 0 or self.position.x >= pygame.display.get_surface().get_width():
             self.kill()

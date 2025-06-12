@@ -43,8 +43,8 @@ class AsteroidField(pygame.sprite.Sprite):
         asteroid = Asteroid(position.x, position.y, radius)
         asteroid.velocity = velocity
 
-    def update(self, dt):
-        self.spawn_timer += dt
+    def update(self, delta_time):
+        self.spawn_timer += delta_time
         if self.spawn_timer > ASTEROID_SPAWN_RATE:
             self.spawn_timer = 0
 
