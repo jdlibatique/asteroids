@@ -15,11 +15,11 @@ class CircleShape(pygame.sprite.Sprite):
 
     def draw(self, screen):
         # sub-classes must override
-        pass
+        raise NotImplementedError("Sub-classes must implement the draw method")
 
     def update(self, dt):
         # sub-classes must override
-        pass
+        raise NotImplementedError("Sub-classes must implement the update method")
 
     def is_collided(self, other):
         return (self.position.distance_to(other.position)
