@@ -24,7 +24,6 @@ class Shot(CircleShape):
         if self.position.x < 0 or self.position.x >= pygame.display.get_surface().get_width():
             self.kill()
             logging.info("Shot out of bounds, removing shot.")
-
-        if self.position.y < 0 or self.position.y >= pygame.display.get_surface().get_height():
+        elif self.position.y < 0 or self.position.y >= pygame.display.get_surface().get_height():
             self.kill()
             logging.info("Shot out of bounds, removing shot.")
